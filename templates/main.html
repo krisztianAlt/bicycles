@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicycle Spider</title>
+
+    <!--Import jquery and Bootstrap-->
+    <script src="jquery\jquery-3.6.0.min.js" ></script>
+    <script src="bootstrap\bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="bootstrap\bootstrap.min.css">
+
+    <!--Import own CSS-->
+    <link rel="stylesheet" href="css\style.css">
+
+    <!--Import own JS-->
+    <script src="js\ui.js" defer></script>
+    <script src="js\data_handler.js" defer></script>
+    <script src="js\main.js" defer></script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="infotext-container">
+            <h2>Hello World, this is my Bicycle Spider's UI</h2>
+            <p>If you press the button below this text, after 5-15 seconds you will get a list of city bikes that are currently available on the website of BikePro. (More info about the project: <a href="https://github.com/krisztianAlt/bicycles" target="_blank">repo on GitHub</a>.)</p>
+            <div class="button-div">
+                <button type="button" class="btn btn-success">Start data extraction</button>
+            </div>
+            <div class="d-flex align-items-center spinner-div visually-hidden">
+                <strong>Crawling...</strong>
+                <div class="spinner-border ms-auto text-primary" role="status" aria-hidden="true"></div>
+            </div>
+            <div class="info-message-container visually-hidden"></div>
+            <div class="error-message-container"></div>
+        </div>
+        <div class="table-container">
+            <p class="visually-hidden">To sort the list by name or price in descending or ascending order, click on the arrowheads next to the column names.</p>
+            <p class="visually-hidden">To go to the product page, please, click on its row.</p>
+            <table class="table table-striped table-hover table-warning">
+                <thead>
+                    <tr>
+                        <th>Product name <span id="name-header-arrow"></span></th>
+                        <th>Price <span id="price-header-arrow"></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

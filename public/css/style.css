@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Courier Prime';
+    src: url local('\fonts\CourierPrime-Regular.ttf') format('truetype');
+    src: url local('\fonts\CourierPrime-Bold.ttf') format('truetype');
+    src: url local('\fonts\CourierPrime-Italic.ttf') format('truetype');
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+    background-color:tan;
+    font-family: 'Courier Prime', monospace;
+}
+
+.infotext-container h2 {
+    text-align: center;
+    margin: 4% auto 2% auto;
+    font-weight: bold;
+}
+
+.infotext-container p {
+    max-width: 50rem;
+    text-align: justify;
+    margin: auto;
+}
+
+.infotext-container p a {
+    text-decoration: none;
+    color: #4d7e7f;
+    font-style: italic;
+}
+
+.infotext-container p a:hover {
+    color: #82b7b8;
+}
+
+.button-div {
+    margin: 2% auto 1% auto;
+    text-align: center;
+}
+
+.spinner-div  {
+    text-align: justify;
+    margin: auto;
+    max-width: 10rem;
+}
+
+.info-message-container {
+    text-align: justify;
+    margin: 1% auto 0 auto;
+    max-width: 20rem;
+}
+
+.error-message-container {
+    text-align: justify;
+    margin: auto;
+    max-width: 30rem;
+}
+
+.error-page-container {
+    text-align: center;
+    margin: 5% auto;
+}
+
+.table-container {
+    max-width: 70rem;
+    margin: 2% auto;
+}
+
+.table-container p {
+    max-width: 50rem;
+    text-align: justify;
+    margin: 0 auto 2% auto;
+}
+
+tbody tr, #name-header-arrow, #price-header-arrow {
+    cursor: pointer;
+}
+
+.price-cell {
+    white-space: nowrap;
+}
+
+.inactive {
+    color: rgba(0, 0, 0, 0.4);
+}
