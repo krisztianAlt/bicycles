@@ -62,14 +62,18 @@ function extractBicycleCategoryURL(mainPageBody) {
 
 function extractBicycleDataFromHTMLCode(pageBody, bicycleDatas) {
     let $ = cheerio.load(pageBody);
-    let nextPageURL = $("div[class='pagination'] div[class='links']").find("b").next().attr("href");
+    // let nextPageURL = $("div[class='pagination'] div[class='links']").find("b").next().attr("href");
+    let nextPageURL = $(".pagination-wrapper li[class='page-item active']").next().children("a").attr("href");
     $("div[class='snapshot-list-container'] div[class='product-snapshot list_div_item']").each(function(){
-        let productName = $(this).find("div[class='snapshot-list-item list_prouctname'] a").text();
-        let productPrice = $(this).find("div[class='snapshot-list-item list_prouctprice'] span[class='list_price']").text().trim();
+        // let productName = $(this).find("div[class='snapshot-list-item list_prouctname'] a").text();
+        let productName = $(this).find(".product-card-title a").text();
+        // let productPrice = $(this).find("div[class='snapshot-list-item list_prouctprice'] span[class='list_price']").text().trim();
+        let productPrice = $(this).find(".product-card-price span[class='product-price']").text().trim();
         productPrice = productPrice.replace(/[.]/g, '');
         productPrice = productPrice.replace(' Ft', '');
-        let productURL = $(this).find("div[class='snapshot-list-item list_prouctname'] a").attr("href");
-        
+        // let productURL = $(this).find("div[class='snapshot-list-item list_prouctname'] a").attr("href");
+        let productURL = $(this).find(".product-card-title a").attr("href");
+
         if (productName.length > 1){
             let bicycle = {
                 name: productName,
