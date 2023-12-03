@@ -68,7 +68,7 @@ function extractBicycleDataFromHTMLCode(pageBody, bicycleDatas) {
         // let productName = $(this).find("div[class='snapshot-list-item list_prouctname'] a").text();
         let productName = $(this).find(".product-card-title a").text();
         // let productPrice = $(this).find("div[class='snapshot-list-item list_prouctprice'] span[class='list_price']").text().trim();
-        let productPrice = $(this).find(".product-card-price span[class='product-price-special']").text().trim();
+        let productPrice = $(this).find(".product-card-price span[class='product-price']").text().trim();
         productPrice = productPrice.replace(/[.]/g, '');
         productPrice = productPrice.replace(' Ft', '');
         // let productURL = $(this).find("div[class='snapshot-list-item list_prouctname'] a").attr("href");
